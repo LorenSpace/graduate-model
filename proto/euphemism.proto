@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service EuphemismService {
+  // 检验句子是否存在委婉语
+  rpc DetectEuphemism(DetectEuphemismRequest) returns (DetectEuphemismResponse) {}
+}
+
+message DetectEuphemismRequest {
+  string text = 1;
+}
+
+message DetectEuphemismResponse {
+  bool result = 1;
+}
